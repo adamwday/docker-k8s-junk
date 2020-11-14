@@ -14,8 +14,8 @@ aws ecr get-login --no-include-email --region us-east-1
 docker built --tag  elasticsearch .
 
 #Tags the docker image before we push it to the ECR.
-docker tag elasticsearch:latest 765717427546.dkr.ecr.us-east-1.amazonaws.com/elasticsearch:latest
+docker tag elasticsearch:latest ${AWSAccountId}.dkr.ecr.us-east-1.amazonaws.com/elasticsearch:latest
 
 #Pushes the docker image to AWS ECR
-docker push 765717427546.dkr.ecr.us-east-1.amazonaws.com/elasticsearch:latest
+docker push ${AWSAccountId}.dkr.ecr.us-east-1.amazonaws.com/elasticsearch:latest
   
